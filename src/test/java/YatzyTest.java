@@ -1,5 +1,5 @@
 import org.junit.*;
-import static org.junit.Assert.*;
+import static org.junit.en;
 
 public class YatzyTest {
 
