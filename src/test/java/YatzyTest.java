@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 public class YatzyTest {
 
     @Test
-    public void chance_scores_sum_of_all_dice() {
+    public void test_chance_scores_sum_of_all_dice() {
         int expected = 15;
         int actual = Yatzy.chance(2,3,4,5,1);
         assertEquals(expected, actual);
