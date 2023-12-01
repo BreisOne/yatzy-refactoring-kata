@@ -1,5 +1,8 @@
+package org.edu.gorilas.Test;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.edu.gorilas.Yatzy;
 
 public class YatzyTest {
 

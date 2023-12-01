@@ -1,3 +1,4 @@
+package org.edu.gorilas;
 public class Yatzy {
 
     public static int chance(int d1, int d2, int d3, int d4, int d5)
