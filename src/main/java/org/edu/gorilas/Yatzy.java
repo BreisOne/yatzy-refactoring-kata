@@ -61,12 +61,9 @@ public class Yatzy {
 
     public int fours()
     {
-        int sum;    
-        sum = 0;
-        for (int at = 0; at != 5; at++) {
-            if (dice[at] == 4) {
-                sum += 4;
-            }
+        int sum = 0;
+        for (int die:dice) {
+            sum += die == 4? 4: 0;
         }
         return sum;
     }
