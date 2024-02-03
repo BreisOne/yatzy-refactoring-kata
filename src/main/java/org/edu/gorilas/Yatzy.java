@@ -50,14 +50,13 @@ public class Yatzy {
     }
 
     protected int[] dice;
-    public Yatzy(int d1, int d2, int d3, int d4, int _5)
+    public Yatzy(int... dice)
     {
-        dice = new int[5];
-        dice[0] = d1;
-        dice[1] = d2;
-        dice[2] = d3;
-        dice[3] = d4;
-        dice[4] = _5;
+        this.dice = new int[5];
+
+        for (int die = 0; die < dice.length; die++) {
+            this.dice[die] = dice[die];
+        }
     }
 
     public int fours()
