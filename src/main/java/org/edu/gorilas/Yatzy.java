@@ -80,9 +80,9 @@ public class Yatzy {
     public int sixes()
     {
         int sum = 0;
-        for (int at = 0; at < dice.length; at++) 
-            if (dice[at] == 6)
-                sum = sum + 6;
+        for (int die:dice)
+            sum += die == 6 ? 6 : 0;
+
         return sum;
     }
 
