@@ -70,12 +70,11 @@ public class Yatzy {
 
     public int fives()
     {
-        int s = 0;
-        int i;
-        for (i = 0; i < dice.length; i++) 
-            if (dice[i] == 5)
-                s = s + 5;
-        return s;
+        int sum = 0;
+        for (int die:dice) {
+            sum += die == 5? 5: 0;
+        }
+        return sum;
     }
 
     public int sixes()
