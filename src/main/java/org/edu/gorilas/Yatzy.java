@@ -116,30 +116,28 @@ public class Yatzy {
 
     public static int four_of_a_kind(int... dice)
     {
-        int [] tallies = new int[6];
+        int [] counts = new int[6];
 
         for(int die:dice){
-            tallies[die-1]++;
+            counts[die-1]++;
         }
         for (int i = 0; i < 6; i++)
-            if (tallies[i] >= 4)
+            if (counts[i] >= 4)
                 return (i+1) * 4;
 
         return 0;
     }
 
-    public static int three_of_a_kind(int d1, int d2, int d3, int d4, int d5)
+    public static int three_of_a_kind(int... dice)
     {
-        int[] t;
-        t = new int[6];
-        t[d1-1]++;
-        t[d2-1]++;
-        t[d3-1]++;
-        t[d4-1]++;
-        t[d5-1]++;
+        int[] counts = new int[6];
+        for(int die: dice){
+            counts[die-1]++;
+        }
         for (int i = 0; i < 6; i++)
-            if (t[i] >= 3)
+            if (counts[i] >= 3)
                 return (i+1) * 3;
+
         return 0;
     }
 
