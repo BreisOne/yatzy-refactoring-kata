@@ -148,28 +148,23 @@ public class Yatzy {
         for(int die:dice){
             counts[die-1]++;
         }
-        for (int count:counts){
-            scores += count == 1? 1: 0;
+        for (int i = 0; i < 5; i++){
+            scores += counts[i] == 1? 1: 0;
         }
         return scores == 5 ? 15 : 0;
     }
 
-    public static int largeStraight(int d1, int d2, int d3, int d4, int d5)
+    public static int largeStraight(int... dice)
     {
-        int[] tallies;
-        tallies = new int[6];
-        tallies[d1-1] += 1;
-        tallies[d2-1] += 1;
-        tallies[d3-1] += 1;
-        tallies[d4-1] += 1;
-        tallies[d5-1] += 1;
-        if (tallies[1] == 1 &&
-            tallies[2] == 1 &&
-            tallies[3] == 1 &&
-            tallies[4] == 1
-            && tallies[5] == 1)
-            return 20;
-        return 0;
+        int[] counts = new int[6];
+        int scores = 0;
+        for(int die:dice){
+            counts[die-1]++;
+        }
+        for (int i = 1; i < 6; i++) {
+            scores += counts[i] == 1 ? 1 : 0;
+        }
+        return scores == 5 ? 20 : 0;
     }
 
     public static int fullHouse(int d1, int d2, int d3, int d4, int d5)
