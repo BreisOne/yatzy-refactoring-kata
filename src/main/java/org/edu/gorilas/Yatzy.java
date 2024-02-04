@@ -141,22 +141,17 @@ public class Yatzy {
         return 0;
     }
 
-    public static int smallStraight(int d1, int d2, int d3, int d4, int d5)
+    public static int smallStraight(int... dice)
     {
-        int[] tallies;
-        tallies = new int[6];
-        tallies[d1-1] += 1;
-        tallies[d2-1] += 1;
-        tallies[d3-1] += 1;
-        tallies[d4-1] += 1;
-        tallies[d5-1] += 1;
-        if (tallies[0] == 1 &&
-            tallies[1] == 1 &&
-            tallies[2] == 1 &&
-            tallies[3] == 1 &&
-            tallies[4] == 1)
-            return 15;
-        return 0;
+        int[] counts = new int[6];
+        int scores = 0;
+        for(int die:dice){
+            counts[die-1]++;
+        }
+        for (int count:counts){
+            scores += count == 1? 1: 0;
+        }
+        return scores == 5 ? 15 : 0;
     }
 
     public static int largeStraight(int d1, int d2, int d3, int d4, int d5)
