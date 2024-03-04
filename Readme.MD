@@ -5,6 +5,9 @@ El código proporcionado implementa un conjunto de funciones relacionadas con el
 ## Clase Yatzy
 La clase Yatzy tiene un constructor que inicializa el array dice con los valores de los dados.
 
+![UML diagram](./src/UML_diagram_yatzy.svg)
+
+
 ```java
 public class Yatzy {
 
