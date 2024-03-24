@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+App ---> Yatzy
+
+class App{
+{static}+main(args:String[]):void
+}
+
+class Yatzy{
+    # dice: int[]
+    --
+    + Yatzy()
+    + {static}chance(int... dice): int
+    + {static}yatzy(int... dice): int
+    + {static}ones(int... dice): int
+    + {static}twos(int... dice): int
+    + {static}threes(int... dice): int
+    + fours():int
+    + fives():int
+    + sixes(): int
+    + {static}score_pair(int... dice): int
+    + {static}two_pair(int... dice): int
+    + {static}four_of_a_kind(int... dice): int
+    + {static}three_of_a_kind(int... dice): int
+    + {static}smallStraight(int... dice): int
+    + {static}largeStraight(int... dice): int
+    + {static}fullHouse(int... dice): int
+
+ }
+@enduml
