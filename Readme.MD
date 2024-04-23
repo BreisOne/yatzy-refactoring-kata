@@ -1,3 +1,6 @@
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
+![tests](https://github.com/BreisOne/yatzy-refactoring-kata/actions/workflows/maven.yml/badge.svg)
+
 # Yatzy ejercicio de refactorización
 
 El código proporcionado implementa un conjunto de funciones relacionadas con el juego de dados Yatzy. Aquí se explica cada función:
