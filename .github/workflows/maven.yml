@@ -34,5 +34,5 @@ jobs:
     - name: Upload JUnit test results
       uses: actions/upload-artifact@v4
       with:
-        name: junit-test-results
+        name: junit-test-results-${{ matrix.os }}
         path: target/surefire-reports/
